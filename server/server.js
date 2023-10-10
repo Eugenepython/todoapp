@@ -99,7 +99,7 @@ app.post('/signup', async (req, res) => {
   } catch (err) {
     console.error(err)
     if (err) {
-      res.json({ detail: 'Username already exists'})
+      res.json({ detail: err.detail})
     }
   }
 })
