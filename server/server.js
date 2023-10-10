@@ -16,11 +16,23 @@ const pool = new Pool({
   database: process.env.DATABASE,
 })
 
+const prodFrontendURL = process.env.FRONTEND_URL;
+const devFrontendURL = 'http://localhost:3000';
+
 
 console.log(pool)
 
 app.use(cors())
 app.use(express.json())
+
+app.use(
+  cors({
+    origin: [prodFrontendURL, devFrontendURL],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+  })
+);
+
 
 // get all todos
 app.get('/todos/:userEmail', async (req, res) => {
