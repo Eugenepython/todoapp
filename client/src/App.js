@@ -6,9 +6,14 @@ import { useCookies } from 'react-cookie'
 
 const App = () => {
   const [cookies, setCookie, removeCookie] = useCookies(null)
+  console.log(cookies + "  cookies")
   const authToken = cookies.AuthToken
   const userEmail = cookies.Email
+  const hoover = cookies.Hoover
+  console.log(cookies + "  cookies")
   const [ tasks, setTasks] = useState(null)
+  console.log(userEmail + "  user email")
+  console.log(hoover + "  hoover")
 
   const getData = async () => {
     try {
