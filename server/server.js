@@ -16,6 +16,7 @@ const pool = new Pool({
   database: process.env.DATABASE,
 })
 
+
 console.log(pool)
 
 app.use(cors())
