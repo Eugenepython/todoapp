@@ -14,7 +14,7 @@ const Auth = () => {
     setIsLogin(status)
   }
 
-console.log(process.env.REACT_APP_SERVERURL + '     SADFSDFSAFASFADSFASDFAFDSAFDSAFSAF')
+console.log(import.meta.env.REACT_APP_SERVERURL + '     SADFSDFSAFASFADSFASDFAFDSAFDSAFSAF')
 
   const handleSubmit = async (e, endpoint) => {
     e.preventDefault();
