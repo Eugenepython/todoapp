@@ -14,6 +14,8 @@ const Auth = () => {
     setIsLogin(status)
   }
 
+console.log(process.env.REACT_APP_SERVERURL + '     SADFSDFSAFASFADSFASDFAFDSAFDSAFSAF')
+
   const handleSubmit = async (e, endpoint) => {
     e.preventDefault();
     if (!isLogIn && password !== confirmPassword) {
