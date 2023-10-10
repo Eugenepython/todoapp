@@ -34,6 +34,7 @@ const App = () => {
 
   return (
     <div className="app">
+      
       {!authToken && <Auth/>}
       {authToken &&
         <>
