@@ -19,7 +19,7 @@ const Auth = () => {
 
 
   const handleSubmit = async (e, endpoint) => {
-    console.log("Before setting email cookie:", data.email);
+   
     console.log("hello")
     e.preventDefault();
     if (!isLogIn && password !== confirmPassword) {
@@ -36,7 +36,7 @@ const Auth = () => {
       });
   console.log("duk")
       if (!response.ok) {
-        // Handle non-successful responses (e.g., 404 or 500 errors)
+        console.error('Response status:', response.status);
         setError('Error occurred while processing the request.');
         return;
       }
@@ -45,13 +45,13 @@ const Auth = () => {
         const data = await response.json();
         if (data.detail) {
           setError(data.detail );
-          console.log(data.detail)
+          console.error('Error in data:', data.detail);
         } else {
           console.log(data)
           setCookie('Email', data.email);
           setCookie('AuthToken', data.token);
           window.location.reload();
-          console.log("hello")
+          console.log("is it working????")
         }
       } else {
         // Handle cases where the response is not JSON
