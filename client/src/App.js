@@ -9,11 +9,11 @@ const App = () => {
   console.log(cookies + "  cookies")
   const authToken = cookies.AuthToken
   const userEmail = cookies.Email
-  const hoover = cookies.Hoover
+
   console.log(cookies + "  cookies")
   const [ tasks, setTasks] = useState(null)
   console.log(userEmail + "  user email")
-  console.log(hoover + "  hoover")
+//in development, userEmail is console.logged as what is entered in the form. in production it remains undefiend
 
   const getData = async () => {
     try {
