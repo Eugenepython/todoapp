@@ -18,7 +18,7 @@ const pool = new Pool({
 
 const prodFrontendURL = process.env.FRONTEND_URL;
 const devFrontendURL = 'http://localhost:3000';
-
+console.log(prodFrontendURL + "  prodFrontendURL")
 
 console.log(pool)
 
@@ -103,10 +103,11 @@ app.post('/signup', async (req, res) => {
     }
   }
 })
-
+console.log("EEEEEEeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
 
 // login
 app.post('/login', async (req, res) => {
+  console.log(req.body)
   const { email, password } = req.body
   try {
     const users = await pool.query('SELECT * FROM users WHERE email = $1', [email])
