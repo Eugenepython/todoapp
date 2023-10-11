@@ -19,7 +19,7 @@ const Auth = () => {
 
 
   const handleSubmit = async (e, endpoint) => {
-    console.log("Fetching:", `${process.env.REACT_APP_SERVERURL}/${endpoint}`);
+    console.log("Fetching:" + process.env.REACT_APP_SERVERURL + endpoint);
 
     console.log("hello")
     //e.preventDefault(); // might this be causing the error?
@@ -28,6 +28,7 @@ const Auth = () => {
       return; /// might this line of code be causing the error?
     }
     try {
+      console.log("fetching?")
       const response = await fetch(`${process.env.REACT_APP_SERVERURL}/${endpoint}`, {
        // const response = await fetch(`${process.env.REACT_APP_SERVERURL}/login`, {
           //const response = await fetch(`http://localhost:3000/${endpoint}`, {
