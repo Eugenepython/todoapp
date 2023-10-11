@@ -25,7 +25,7 @@ const Auth = () => {
     //e.preventDefault(); // might this be causing the error?
     if (!isLogIn && password !== confirmPassword) {
       setError('Make sure passwords match!');
-      //return; /// might this line of code be causing the error?
+      return; /// might this line of code be causing the error?
     }
     try {
       const response = await fetch(`${process.env.REACT_APP_SERVERURL}/${endpoint}`, {
