@@ -24,7 +24,6 @@ const Auth = () => {
       setError('Make sure passwords match!');
       return;
     }
-  
     try {
       const response = await fetch(`${process.env.REACT_APP_SERVERURL}/${endpoint}`, {
        // const response = await fetch(`${process.env.REACT_APP_SERVERURL}/login`, {
@@ -39,21 +38,22 @@ const Auth = () => {
         setError('Error occurred while processing the request.');
         return;
       }
-  
       const contentType = response.headers.get('content-type');
       if (contentType && contentType.includes('application/json')) {
         const data = await response.json();
-  
         if (data.detail) {
           setError(data.detail );
+          console.log(data.detail)
         } else {
           setCookie('Email', data.email);
           setCookie('AuthToken', data.token);
           window.location.reload();
+          console.log("hello")
         }
       } else {
         // Handle cases where the response is not JSON
         setError('Unexpected response format.');
+        console.log("unexpected response format")
       }
     } catch (error) {
       console.error('An error occurred:', error);
