@@ -32,7 +32,7 @@ const Auth = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
       });
-  console/log("duk")
+  console.log("duk")
       if (!response.ok) {
         // Handle non-successful responses (e.g., 404 or 500 errors)
         setError('Error occurred while processing the request.');
