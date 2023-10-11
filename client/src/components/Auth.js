@@ -46,6 +46,7 @@ const Auth = () => {
       const contentType = response.headers.get('content-type');
       if (contentType && contentType.includes('application/json')) {
         const data = await response.json();
+        console.log("hoover")
         if (data.detail) {
           setError(data.detail );
           console.error('Error in data:', data.detail);
