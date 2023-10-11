@@ -22,7 +22,8 @@ const Auth = () => {
     console.log("Fetching:" + process.env.REACT_APP_SERVERURL + endpoint);
 
     console.log("hello")
-    //e.preventDefault(); // might this be causing the error?
+    e.preventDefault(); // might this be causing the error?
+    console.log("after deafult")
     if (!isLogIn && password !== confirmPassword) {
       setError('Make sure passwords match!');
       return; /// might this line of code be causing the error?
