@@ -19,7 +19,8 @@ const Auth = () => {
 
 
   const handleSubmit = async (e, endpoint) => {
-   
+    console.log("Fetching:", `${process.env.REACT_APP_SERVERURL}/${endpoint}`);
+
     console.log("hello")
     e.preventDefault();
     if (!isLogIn && password !== confirmPassword) {
