@@ -19,7 +19,7 @@ const Auth = () => {
 
 
   const handleSubmit = async (e, endpoint) => {
-    console.log("Fetching:" + process.env.REACT_APP_SERVERURL + endpoint);
+    console.log("Fetching:" + process.env.REACT_APP_SERVERURL + '/' + endpoint);
 
     console.log("hello")
     e.preventDefault(); // might this be causing the error?
@@ -67,8 +67,7 @@ const Auth = () => {
       setError('An error occurred while processing the request.');
     }
   };
-  
-
+ 
 
   return (
     <>
