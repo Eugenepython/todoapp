@@ -19,8 +19,7 @@ const Auth = () => {
 
 
   const handleSubmit = async (e, endpoint) => {
-    console.log("isLogIn:", isLogIn); // Log the value of isLogIn
-    console.log("Endpoint:", endpoint); // Log the chosen endpoint
+   
     console.log("hello")
     e.preventDefault();
     if (!isLogIn && password !== confirmPassword) {
