@@ -29,7 +29,7 @@ const App = () => {
     if (authToken) {
       getData()
     }}
-  , [])
+  , [authToken])
 
   console.log(tasks)
 
