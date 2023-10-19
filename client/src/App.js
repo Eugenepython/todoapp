@@ -6,11 +6,11 @@ import { useCookies } from 'react-cookie'
 
 const App = () => {
   const [cookies, setCookie, removeCookie] = useCookies(null)
-  console.log(cookies + "  cookies")
+  //console.log(cookies + "  cookies")
   const authToken = cookies.AuthToken
   const userEmail = cookies.Email
 
-  console.log(cookies + "  cookies")
+ 
   const [ tasks, setTasks] = useState(null)
   console.log(userEmail + "  user email")
 //in development, userEmail is console.logged as what is entered in the form. in production it remains undefiend

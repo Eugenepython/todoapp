@@ -16,6 +16,9 @@ const pool = new Pool({
   database: process.env.DATABASE,
 })
 
+
+
+
 const prodFrontendURL = process.env.FRONTEND_URL;
 const devFrontendURL = 'http://localhost:3000';
 console.log(prodFrontendURL + "  prodFrontendURL")
